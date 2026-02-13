@@ -1,26 +1,223 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* ─── OKLCH Design Tokens ─── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Font families */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Primary brand palette — derived from #3488FB */
+  --color-primary-50: oklch(0.97 0.02 250);
+  --color-primary-100: oklch(0.93 0.04 250);
+  --color-primary-200: oklch(0.87 0.08 250);
+  --color-primary-300: oklch(0.79 0.12 250);
+  --color-primary-400: oklch(0.71 0.15 250);
+  --color-primary-500: oklch(0.63 0.18 250);
+  --color-primary-600: oklch(0.55 0.18 250);
+  --color-primary-700: oklch(0.47 0.16 250);
+  --color-primary-800: oklch(0.39 0.13 250);
+  --color-primary-900: oklch(0.28 0.08 250);
+  --color-primary-950: oklch(0.20 0.05 250);
+
+  /* Neutral grays — hue 250, very low chroma */
+  --color-neutral-50: oklch(0.98 0.005 250);
+  --color-neutral-100: oklch(0.96 0.005 250);
+  --color-neutral-200: oklch(0.92 0.008 250);
+  --color-neutral-300: oklch(0.87 0.008 250);
+  --color-neutral-400: oklch(0.71 0.01 250);
+  --color-neutral-500: oklch(0.55 0.01 250);
+  --color-neutral-600: oklch(0.45 0.012 250);
+  --color-neutral-700: oklch(0.37 0.012 250);
+  --color-neutral-800: oklch(0.27 0.01 250);
+  --color-neutral-900: oklch(0.21 0.01 250);
+  --color-neutral-950: oklch(0.14 0.008 250);
+
+  /* Semantic colors */
+  --color-success: oklch(0.65 0.18 155);
+  --color-warning: oklch(0.75 0.15 85);
+  --color-error: oklch(0.60 0.20 25);
+
+  /* shadcn/ui color bindings */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Light mode ─── */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.99 0.003 250);
+  --foreground: oklch(0.20 0.05 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.20 0.05 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.20 0.05 250);
+  --primary: oklch(0.63 0.18 250);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --secondary: oklch(0.97 0.02 250);
+  --secondary-foreground: oklch(0.28 0.08 250);
+  --muted: oklch(0.96 0.005 250);
+  --muted-foreground: oklch(0.45 0.012 250);
+  --accent: oklch(0.93 0.04 250);
+  --accent-foreground: oklch(0.28 0.08 250);
+  --destructive: oklch(0.60 0.20 25);
+  --border: oklch(0.92 0.008 250);
+  --input: oklch(0.92 0.008 250);
+  --ring: oklch(0.63 0.18 250);
+}
+
+/* ─── Dark mode ─── */
+.dark {
+  --background: oklch(0.14 0.008 250);
+  --foreground: oklch(0.96 0.005 250);
+  --card: oklch(0.18 0.01 250);
+  --card-foreground: oklch(0.96 0.005 250);
+  --popover: oklch(0.18 0.01 250);
+  --popover-foreground: oklch(0.96 0.005 250);
+  --primary: oklch(0.63 0.18 250);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --secondary: oklch(0.21 0.015 250);
+  --secondary-foreground: oklch(0.96 0.005 250);
+  --muted: oklch(0.21 0.015 250);
+  --muted-foreground: oklch(0.65 0.01 250);
+  --accent: oklch(0.24 0.02 250);
+  --accent-foreground: oklch(0.96 0.005 250);
+  --destructive: oklch(0.60 0.20 25);
+  --border: oklch(0.27 0.015 250);
+  --input: oklch(0.27 0.015 250);
+  --ring: oklch(0.63 0.18 250);
+}
+
+/* ─── Base styles ─── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
+    color: oklch(0.20 0.05 250);
+  }
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: oklch(0.96 0.005 250);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Smooth scrolling ─── */
+html {
+  scroll-behavior: smooth;
 }
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.96 0.005 250);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.79 0.12 250);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.63 0.18 250);
+}
+
+/* ─── Animations ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px oklch(0.63 0.18 250 / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px oklch(0.63 0.18 250 / 0.4);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Stagger children animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
