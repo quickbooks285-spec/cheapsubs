@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="7" fill="oklch(0.63 0.18 250)"/>
+  <text 
+    x="50%" 
+    y="52%" 
+    dominant-baseline="central" 
+    text-anchor="middle" 
+    fill="white" 
+    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 900; font-size: 11px; letter-spacing: -0.05em;"
+  >CDS</text>
+</svg>

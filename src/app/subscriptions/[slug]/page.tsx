@@ -7,6 +7,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { platforms, getPlatformBySlug } from "@/data/platforms";
+import { ProductSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 import { Check } from "lucide-react";
 
 // Generate static paths for all platforms
@@ -29,6 +30,9 @@ export async function generateMetadata({
     return {
         title: `${platform.name} Subscription — Save ${platform.discountPercent}% | Only $${platform.ourPrice}/mo`,
         description: `Get ${platform.name} at $${platform.ourPrice}/mo instead of $${platform.originalPrice}/mo — save ${platform.discountPercent}%. ${platform.description} 100% legitimate, instant access, certificates included.`,
+        alternates: {
+            canonical: `/subscriptions/${platform.slug}`,
+        },
         keywords: [
             `${platform.name.toLowerCase()} discount`,
             `cheap ${platform.name.toLowerCase()}`,
@@ -68,6 +72,24 @@ export default async function PlatformPage({
 
     return (
         <>
+            <ProductSchema
+                name={platform.name}
+                description={platform.longDescription}
+                slug={platform.slug}
+                originalPrice={platform.originalPrice}
+                ourPrice={platform.ourPrice}
+                discountPercent={platform.discountPercent}
+                features={platform.features}
+            />
+            <BreadcrumbSchema
+                items={[
+                    { name: "Home", href: "/" },
+                    { name: "Subscriptions", href: "/" },
+                    { name: platform.name, href: `/subscriptions/${platform.slug}` },
+                ]}
+            />
+            {platform.faqs.length > 0 && <FAQSchema faqs={platform.faqs} />}
+
             <HeroSection
                 variant="small"
                 badge={`Save ${platform.discountPercent}% — Starting at $${platform.ourPrice}/mo`}

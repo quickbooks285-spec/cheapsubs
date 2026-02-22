@@ -8,6 +8,7 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { PlatformSelector } from "@/components/sections/PlatformSelector";
 import { platforms, generalTestimonials, generalFAQs } from "@/data/platforms";
+import { ServiceSchema, FAQSchema } from "@/components/seo/JsonLd";
 import {
   Percent, Zap, ShieldCheck, Headphones,
 } from "lucide-react";
@@ -48,6 +49,9 @@ const stats = [
 export default function HomePage() {
   return (
     <>
+      <ServiceSchema />
+      <FAQSchema faqs={generalFAQs} />
+
       <HeroSection
         badge="Save up to 60% on premium subscriptions"
         title="Premium E-Learning, Fraction of the Price"
@@ -70,8 +74,6 @@ export default function HomePage() {
         features={whyChooseUs}
         columns={4}
       />
-
-
 
       <TestimonialsSection
         title="Loved by 50,000+ Learners"

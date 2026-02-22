@@ -3,12 +3,26 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { BreadcrumbSchema, WebPageSchema } from "@/components/seo/JsonLd";
 import { Heart, Target, Users, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "About CDS — 50,000+ Learners Saving Up to 60% on E-Learning",
     description:
         "Discover how Cheap Digital Subscriptions makes premium e-learning affordable for 50,000+ learners in 120+ countries. Group licensing partnerships with Coursera, Udemy, edX & more.",
+    alternates: {
+        canonical: "/about",
+    },
+    keywords: ["about CDS", "group licensing e-learning", "affordable education", "cheap digital subscriptions story"],
+    openGraph: {
+        title: "About CDS — 50,000+ Learners Saving Up to 60% on E-Learning",
+        description: "Discover how Cheap Digital Subscriptions makes premium e-learning affordable for 50,000+ learners in 120+ countries. Group licensing partnerships with Coursera, Udemy, edX & more.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About CDS — 50,000+ Learners Saving Up to 60% on E-Learning",
+        description: "Discover how Cheap Digital Subscriptions makes premium e-learning affordable for 50,000+ learners in 120+ countries. Group licensing partnerships with Coursera, Udemy, edX & more.",
+    },
 };
 
 const stats = [
@@ -48,6 +62,15 @@ const values = [
 export default function AboutPage() {
     return (
         <>
+            <BreadcrumbSchema items={[
+                { name: "Home", href: "/" },
+                { name: "About", href: "/about" },
+            ]} />
+            <WebPageSchema
+                title="About Cheap Digital Subscriptions"
+                description="Discover how CDS makes premium e-learning affordable for 50,000+ learners in 120+ countries."
+                url="/about"
+            />
             <HeroSection
                 variant="small"
                 badge="Our Story"

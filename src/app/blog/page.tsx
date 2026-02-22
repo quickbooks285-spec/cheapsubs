@@ -1,12 +1,26 @@
 import { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "E-Learning Blog — Tips, Guides & Industry News | CDS",
     description:
         "Explore expert tips, courses guides, and platform comparisons. Stay ahead in your career with insights from Cheap Digital Subscriptions.",
+    alternates: {
+        canonical: "/blog",
+    },
+    keywords: ["e-learning blog", "online learning tips", "course guides", "platform comparisons", "career advancement"],
+    openGraph: {
+        title: "E-Learning Blog — Tips, Guides & Industry News | CDS",
+        description: "Explore expert tips, courses guides, and platform comparisons. Stay ahead in your career with insights from Cheap Digital Subscriptions.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "E-Learning Blog — Tips, Guides & Industry News | CDS",
+        description: "Explore expert tips, courses guides, and platform comparisons. Stay ahead in your career with insights from Cheap Digital Subscriptions.",
+    },
 };
 
 const blogPosts = [
@@ -71,6 +85,10 @@ const categoryColors: Record<string, string> = {
 export default function BlogPage() {
     return (
         <>
+            <BreadcrumbSchema items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog" },
+            ]} />
             <HeroSection
                 variant="small"
                 badge="Blog"

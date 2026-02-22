@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { OrganizationSchema, WebSiteSchema } from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,12 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cheapdigitalsubs.com"),
   title: {
     default: "Cheap Digital Subscriptions — Save Up to 60% on Premium E-Learning",
     template: "%s | CDS — Cheap Digital Subscriptions",
   },
   description:
     "Get discounted access to Coursera, Udemy, edX, LinkedIn Learning, Skillshare & more. Save up to 60% on premium e-learning subscriptions. 100% legitimate accounts, instant access, 24/7 support.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "cheap e-learning subscriptions",
     "discounted coursera",
@@ -58,6 +63,15 @@ export const metadata: Metadata = {
     description:
       "Premium e-learning platforms at a fraction of the price. Coursera, Udemy, edX & more — save up to 60%. Instant access.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -70,6 +84,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <OrganizationSchema />
+        <WebSiteSchema />
         <Header />
         <main>{children}</main>
         <Footer />

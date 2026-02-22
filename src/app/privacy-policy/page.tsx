@@ -6,6 +6,19 @@ export const metadata: Metadata = {
     title: "Privacy Policy — Protecting Your Data | CDS",
     description:
         "Understand how Cheap Digital Subscriptions collects, uses, and secures your personal information. We are committed to protecting your privacy and data.",
+    alternates: {
+        canonical: "/privacy-policy",
+    },
+    keywords: ["privacy policy", "data protection", "secure learning", "privacy terms"],
+    openGraph: {
+        title: "Privacy Policy — Protecting Your Data | CDS",
+        description: "Understand how Cheap Digital Subscriptions collects, uses, and secures your personal information. We are committed to protecting your privacy and data.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Privacy Policy — Protecting Your Data | CDS",
+        description: "Understand how Cheap Digital Subscriptions collects, uses, and secures your personal information. We are committed to protecting your privacy and data.",
+    },
 };
 
 export default function PrivacyPolicyPage() {

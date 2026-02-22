@@ -2,11 +2,25 @@ import { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { FAQSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
     title: "Help Center — Support, FAQs & Guides | CDS",
     description:
         "Get instant answers and support for your CDS account. Billing, subscription management, troubleshooting, and more.",
+    alternates: {
+        canonical: "/help-center",
+    },
+    keywords: ["help center", "FAQ", "troubleshooting", "e-learning guides", "support resources"],
+    openGraph: {
+        title: "Help Center — Support, FAQs & Guides | CDS",
+        description: "Get instant answers and support for your CDS account. Billing, subscription management, troubleshooting, and more.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Help Center — Support, FAQs & Guides | CDS",
+        description: "Get instant answers and support for your CDS account. Billing, subscription management, troubleshooting, and more.",
+    },
 };
 
 const helpCategories = [
@@ -82,6 +96,7 @@ const helpFAQs = [
 export default function HelpCenterPage() {
     return (
         <>
+            <FAQSchema faqs={helpFAQs} />
             <HeroSection
                 variant="small"
                 badge="Support"

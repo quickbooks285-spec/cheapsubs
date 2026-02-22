@@ -7,6 +7,19 @@ export const metadata: Metadata = {
     title: "Student Discount — Extra 15% Off Subscriptions | CDS",
     description:
         "Verified students get an additional 15% off our already discounted prices. Save on Coursera, Udemy, and more with your .edu email.",
+    alternates: {
+        canonical: "/student-discount",
+    },
+    keywords: ["student discount", "education discount", "cheap courses for students", "university learning discount"],
+    openGraph: {
+        title: "Student Discount — Extra 15% Off Subscriptions | CDS",
+        description: "Verified students get an additional 15% off our already discounted prices. Save on Coursera, Udemy, and more with your .edu email.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Student Discount — Extra 15% Off Subscriptions | CDS",
+        description: "Verified students get an additional 15% off our already discounted prices. Save on Coursera, Udemy, and more with your .edu email.",
+    },
 };
 
 const benefits = [

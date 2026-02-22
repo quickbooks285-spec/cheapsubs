@@ -6,6 +6,19 @@ export const metadata: Metadata = {
     title: "Terms of Service — Platform Usage & Guidelines | CDS",
     description:
         "Read the comprehensive Terms of Service for Cheap Digital Subscriptions. Learn about account rules, billing policies, and user responsibilities.",
+    alternates: {
+        canonical: "/terms-of-service",
+    },
+    keywords: ["terms of service", "user guidelines", "platform rules", "subscription policies"],
+    openGraph: {
+        title: "Terms of Service — Platform Usage & Guidelines | CDS",
+        description: "Read the comprehensive Terms of Service for Cheap Digital Subscriptions. Learn about account rules, billing policies, and user responsibilities.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Terms of Service — Platform Usage & Guidelines | CDS",
+        description: "Read the comprehensive Terms of Service for Cheap Digital Subscriptions. Learn about account rules, billing policies, and user responsibilities.",
+    },
 };
 
 export default function TermsOfServicePage() {

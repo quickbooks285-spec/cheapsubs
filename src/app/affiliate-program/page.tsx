@@ -7,6 +7,19 @@ export const metadata: Metadata = {
     title: "Affiliate Program — Earn 20% Commission with CDS",
     description:
         "Partner with us and earn 20% recurring commission on every sale. Join the highest-paying affiliate program in e-learning deals.",
+    alternates: {
+        canonical: "/affiliate-program",
+    },
+    keywords: ["affiliate program", "e-learning affiliate", "earn commission", "partner program"],
+    openGraph: {
+        title: "Affiliate Program — Earn 20% Commission with CDS",
+        description: "Partner with us and earn 20% recurring commission on every sale. Join the highest-paying affiliate program in e-learning deals.",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Affiliate Program — Earn 20% Commission with CDS",
+        description: "Partner with us and earn 20% recurring commission on every sale. Join the highest-paying affiliate program in e-learning deals.",
+    },
 };
 
 const benefits = [
