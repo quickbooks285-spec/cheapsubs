@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cheapdigitalsubs.com"),
+  metadataBase: new URL("https://cheapdigitalsubscriptions.com"),
   title: {
     default: "Cheap Digital Subscriptions — Save Up to 60% on Premium E-Learning",
     template: "%s | CDS — Cheap Digital Subscriptions",

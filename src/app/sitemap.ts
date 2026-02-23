@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { platforms } from "@/data/platforms";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://cheapdigitalsubs.com";
+    const baseUrl = "https://cheapdigitalsubscriptions.com";
     const now = new Date();
 
     // Static pages
