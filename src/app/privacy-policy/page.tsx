@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description:
         "Understand how Cheap Digital Subscriptions collects, uses, and secures your personal information. We are committed to protecting your privacy and data.",
     alternates: {
-        canonical: "/privacy-policy",
+        canonical: "https://cheapdigitalsubscriptions.com/privacy-policy",
     },
     keywords: ["privacy policy", "data protection", "secure learning", "privacy terms"],
     openGraph: {
@@ -100,14 +100,14 @@ export default function PrivacyPolicyPage() {
                                         <li>Request a copy of your data in a portable format</li>
                                         <li>Withdraw consent where processing is based on consent</li>
                                     </ul>
-                                    <p>To exercise any of these rights, contact us at <strong>privacy@cheapdigitalsubs.com</strong>.</p>
+                                    <p>To exercise any of these rights, contact us at <strong>privacy@cheapdigitalsubscriptions.com</strong>.</p>
                                 </div>
                             </div>
 
                             <div>
                                 <h2 className="text-2xl font-bold mb-4" style={{ color: "oklch(0.20 0.05 250)" }}>7. Contact Us</h2>
                                 <p className="text-base leading-relaxed" style={{ color: "oklch(0.40 0.02 250)" }}>
-                                    If you have any questions about this Privacy Policy, please contact us at <strong>privacy@cheapdigitalsubs.com</strong> or visit our <a href="/contact" className="font-semibold underline" style={{ color: "oklch(0.63 0.18 250)" }}>Contact page</a>.
+                                    If you have any questions about this Privacy Policy, please contact us at <strong>privacy@cheapdigitalsubscriptions.com</strong> or visit our <a href="/contact" className="font-semibold underline" style={{ color: "oklch(0.63 0.18 250)" }}>Contact page</a>.
                                 </p>
                             </div>
                         </div>

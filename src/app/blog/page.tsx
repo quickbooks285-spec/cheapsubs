@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description:
         "Explore expert tips, courses guides, and platform comparisons. Stay ahead in your career with insights from Cheap Digital Subscriptions.",
     alternates: {
-        canonical: "/blog",
+        canonical: "https://cheapdigitalsubscriptions.com/blog",
     },
     keywords: ["e-learning blog", "online learning tips", "course guides", "platform comparisons", "career advancement"],
     openGraph: {

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Get discounted access to Coursera, Udemy, edX, LinkedIn Learning, Skillshare & more. Save up to 60% on premium e-learning subscriptions. 100% legitimate accounts, instant access, 24/7 support.",
   alternates: {
-    canonical: "/",
+    canonical: "https://cheapdigitalsubscriptions.com/",
   },
   keywords: [
     "cheap e-learning subscriptions",

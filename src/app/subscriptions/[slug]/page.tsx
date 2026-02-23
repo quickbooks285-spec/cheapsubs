@@ -31,7 +31,7 @@ export async function generateMetadata({
         title: `${platform.name} Subscription — Save ${platform.discountPercent}% | Only $${platform.ourPrice}/mo`,
         description: `Get ${platform.name} at $${platform.ourPrice}/mo instead of $${platform.originalPrice}/mo — save ${platform.discountPercent}%. ${platform.description} 100% legitimate, instant access, certificates included.`,
         alternates: {
-            canonical: `/subscriptions/${platform.slug}`,
+            canonical: `https://cheapdigitalsubscriptions.com/subscriptions/${platform.slug}`,
         },
         keywords: [
             `${platform.name.toLowerCase()} discount`,

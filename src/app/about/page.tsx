@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
         "Discover how Cheap Digital Subscriptions makes premium e-learning affordable for 50,000+ learners in 120+ countries. Group licensing partnerships with Coursera, Udemy, edX & more.",
     alternates: {
-        canonical: "/about",
+        canonical: "https://cheapdigitalsubscriptions.com/about",
     },
     keywords: ["about CDS", "group licensing e-learning", "affordable education", "cheap digital subscriptions story"],
     openGraph: {

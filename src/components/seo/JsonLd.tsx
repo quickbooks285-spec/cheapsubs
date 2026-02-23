@@ -1,6 +1,6 @@
 import type { FAQ } from "@/data/platforms";
 
-const BASE_URL = "https://cheapdigitalsubs.com";
+const BASE_URL = "https://cheapdigitalsubscriptions.com";
 
 // ─── Helper ──────────────────────────────────────────────────────────
 function JsonLdScript({ data }: { data: Record<string, unknown> | Record<string, unknown>[] }) {
@@ -26,7 +26,7 @@ export function OrganizationSchema() {
         contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer support",
-            email: "support@cheapdigitalsubs.com",
+            email: "support@cheapdigitalsubscriptions.com",
             availableLanguage: ["English"],
         },
         sameAs: [],

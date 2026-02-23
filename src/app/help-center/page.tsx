@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description:
         "Get instant answers and support for your CDS account. Billing, subscription management, troubleshooting, and more.",
     alternates: {
-        canonical: "/help-center",
+        canonical: "https://cheapdigitalsubscriptions.com/help-center",
     },
     keywords: ["help center", "FAQ", "troubleshooting", "e-learning guides", "support resources"],
     openGraph: {
@@ -73,7 +73,7 @@ const helpFAQs = [
     },
     {
         question: "What if I have trouble logging in?",
-        answer: "First, double-check the credentials sent to your email. If issues persist, contact our support team at support@cheapdigitalsubs.com and we'll resolve it within 1 hour during business hours.",
+        answer: "First, double-check the credentials sent to your email. If issues persist, contact our support team at support@cheapdigitalsubscriptions.com and we'll resolve it within 1 hour during business hours.",
     },
     {
         question: "Can I switch to a different platform?",

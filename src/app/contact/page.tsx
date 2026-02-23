@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description:
         "Need help with your e-learning subscription? Contact CDS support for instant assistance with accounts, billing, or platform access. We respond within 24 hours.",
     alternates: {
-        canonical: "/contact",
+        canonical: "https://cheapdigitalsubscriptions.com/contact",
     },
     keywords: ["contact support", "customer support", "e-learning help", "subscription support"],
     openGraph: {

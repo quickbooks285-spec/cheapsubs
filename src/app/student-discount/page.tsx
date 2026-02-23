@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description:
         "Verified students get an additional 15% off our already discounted prices. Save on Coursera, Udemy, and more with your .edu email.",
     alternates: {
-        canonical: "/student-discount",
+        canonical: "https://cheapdigitalsubscriptions.com/student-discount",
     },
     keywords: ["student discount", "education discount", "cheap courses for students", "university learning discount"],
     openGraph: {

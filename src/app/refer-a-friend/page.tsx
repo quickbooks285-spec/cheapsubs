@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description:
         "Earn $5 credit for every friend you refer to Cheap Digital Subscriptions. Give them 10% off their first purchase. Win-win!",
     alternates: {
-        canonical: "/refer-a-friend",
+        canonical: "https://cheapdigitalsubscriptions.com/refer-a-friend",
     },
     keywords: ["refer a friend", "e-learning referral", "cheap digital subscriptions rewards", "discount logic", "student discount program"],
     openGraph: {

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description:
         "Partner with us and earn 20% recurring commission on every sale. Join the highest-paying affiliate program in e-learning deals.",
     alternates: {
-        canonical: "/affiliate-program",
+        canonical: "https://cheapdigitalsubscriptions.com/affiliate-program",
     },
     keywords: ["affiliate program", "e-learning affiliate", "earn commission", "partner program"],
     openGraph: {

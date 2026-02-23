@@ -13,7 +13,7 @@ const contactInfo = [
     {
         icon: <Mail className="w-5 h-5" style={{ color: "oklch(0.63 0.18 250)" }} />,
         title: "Email Us",
-        detail: "support@cheapdigitalsubs.com",
+        detail: "support@cheapdigitalsubscriptions.com",
         subtitle: "We'll respond within 24 hours",
     },
     {

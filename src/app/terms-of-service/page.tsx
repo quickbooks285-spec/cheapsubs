@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description:
         "Read the comprehensive Terms of Service for Cheap Digital Subscriptions. Learn about account rules, billing policies, and user responsibilities.",
     alternates: {
-        canonical: "/terms-of-service",
+        canonical: "https://cheapdigitalsubscriptions.com/terms-of-service",
     },
     keywords: ["terms of service", "user guidelines", "platform rules", "subscription policies"],
     openGraph: {
@@ -117,7 +117,7 @@ export default function TermsOfServicePage() {
                             <div>
                                 <h2 className="text-2xl font-bold mb-4" style={{ color: "oklch(0.20 0.05 250)" }}>8. Contact</h2>
                                 <p className="text-base leading-relaxed" style={{ color: "oklch(0.40 0.02 250)" }}>
-                                    For questions regarding these Terms of Service, contact us at <strong>legal@cheapdigitalsubs.com</strong> or visit our <a href="/contact" className="font-semibold underline" style={{ color: "oklch(0.63 0.18 250)" }}>Contact page</a>.
+                                    For questions regarding these Terms of Service, contact us at <strong>legal@cheapdigitalsubscriptions.com</strong> or visit our <a href="/contact" className="font-semibold underline" style={{ color: "oklch(0.63 0.18 250)" }}>Contact page</a>.
                                 </p>
                             </div>
                         </div>
