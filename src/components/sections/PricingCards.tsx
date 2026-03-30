@@ -23,7 +23,7 @@ export function PricingCards({
         <section className={cn("py-20 md:py-28", className)}>
             <Container>
                 <SectionHeading title={title} subtitle={subtitle} />
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 items-start">
+                <div className={cn("grid grid-cols-1 gap-6 md:gap-4 lg:gap-6 items-start", plans.length === 1 ? "max-w-sm mx-auto" : "md:grid-cols-3")}>
                     {plans.map((plan, index) => (
                         <PricingCard
                             key={index}
