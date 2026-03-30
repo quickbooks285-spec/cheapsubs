@@ -54,7 +54,7 @@ export default function HomePage() {
 
       <HeroSection
         badge="Save up to 60% on premium subscriptions"
-        title="Premium E-Learning, Fraction of the Price"
+        title="Affordable Learning Subscriptions"
         subtitle="Access the world's top learning platforms — Coursera, Udemy, edX, LinkedIn Learning, and more — at prices that won't break the bank. Start learning today."
       >
         <PlatformSelector />

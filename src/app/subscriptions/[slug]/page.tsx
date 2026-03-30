@@ -93,7 +93,7 @@ export default async function PlatformPage({
             <HeroSection
                 variant="small"
                 badge={`Save ${platform.discountPercent}% — Starting at $${platform.ourPrice}/mo`}
-                title={`${platform.name} Subscription`}
+                title={platform.h1 ?? `${platform.name} Subscription`}
                 subtitle={platform.longDescription}
             />
 

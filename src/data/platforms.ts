@@ -34,18 +34,20 @@ export interface Platform {
   faqs: FAQ[];
   color: string;
   icon: string;
+  h1?: string;
 }
 
 export const platforms: Platform[] = [
   {
     name: "Coursera",
     slug: "coursera",
+    h1: "Coursera subscription discount",
     description: "Access world-class university courses and professional certificates from top institutions.",
     longDescription: "Coursera partners with over 300 leading universities and companies to bring flexible, affordable, and job-relevant online learning to individuals and organizations worldwide. Earn degrees, professional certificates, and develop in-demand skills with courses from Stanford, Google, IBM, and more. Our discounted subscription gives you unlimited access to thousands of courses, guided projects, and specializations.",
     logo: "/platforms/coursera.svg",
     originalPrice: 59,
-    ourPrice: 24,
-    discountPercent: 59,
+    ourPrice: 49,
+    discountPercent: 17,
     color: "oklch(0.55 0.18 250)",
     icon: "GraduationCap",
     features: [
@@ -58,23 +60,11 @@ export const platforms: Platform[] = [
     ],
     plans: [
       {
-        name: "Monthly",
-        price: 24,
-        period: "month",
-        features: ["Full platform access", "Unlimited courses", "Certificates included", "Cancel anytime"],
-      },
-      {
-        name: "Quarterly",
-        price: 19,
-        period: "month",
-        features: ["Full platform access", "Unlimited courses", "Certificates included", "Priority support", "Billed quarterly"],
-        popular: true,
-      },
-      {
         name: "Annual",
-        price: 14,
-        period: "month",
+        price: 49,
+        period: "year",
         features: ["Full platform access", "Unlimited courses", "Certificates included", "Priority support", "Career guidance", "Billed annually"],
+        popular: true,
       },
     ],
     testimonials: [
@@ -119,6 +109,7 @@ export const platforms: Platform[] = [
   {
     name: "Udemy",
     slug: "udemy",
+    h1: "Udemy subscription discount",
     description: "Learn anything with 200,000+ courses taught by real-world experts.",
     longDescription: "Udemy is the world's largest online learning marketplace with over 200,000 courses covering everything from programming and data science to photography, music, and personal development. Our Udemy Business subscription gives you access to a curated collection of top-rated courses for professional development, all at a significant discount from the standard pricing.",
     logo: "/platforms/udemy.svg",
@@ -188,6 +179,7 @@ export const platforms: Platform[] = [
   {
     name: "edX",
     slug: "edx",
+    h1: "edX subscription discount",
     description: "Take university-level courses from Harvard, MIT, and 160+ institutions.",
     longDescription: "edX offers courses from the world's best universities and institutions, including Harvard, MIT, Berkeley, and many more. Learn cutting-edge skills in data science, computer science, business, humanities, and beyond. Our discounted subscription provides access to verified certificates and professional programs at a fraction of the regular cost.",
     logo: "/platforms/edx.svg",
@@ -257,6 +249,7 @@ export const platforms: Platform[] = [
   {
     name: "LinkedIn Learning",
     slug: "linkedin-learning",
+    h1: "LinkedIn Learning subscription discount",
     description: "Build business, tech, and creative skills with 16,000+ expert-led courses.",
     longDescription: "LinkedIn Learning (formerly Lynda.com) offers over 16,000 courses taught by industry experts in business, technology, and creative fields. Courses are integrated directly with your LinkedIn profile, making it easy to showcase new skills to your professional network. Our discounted subscription includes all premium features at a fraction of the standard price.",
     logo: "/platforms/linkedin-learning.svg",
@@ -326,6 +319,7 @@ export const platforms: Platform[] = [
   {
     name: "Skillshare",
     slug: "skillshare",
+    h1: "Skillshare subscription discount",
     description: "Explore creative classes in design, illustration, photography, and more.",
     longDescription: "Skillshare is an online learning community with thousands of classes in design, business, technology, and more. Unlike traditional platforms, Skillshare focuses on project-based learning, encouraging you to create real work as you learn. Our discounted Premium membership gives you unlimited access to all classes, including offline viewing.",
     logo: "/platforms/skillshare.svg",
@@ -395,6 +389,7 @@ export const platforms: Platform[] = [
   {
     name: "Pluralsight",
     slug: "pluralsight",
+    h1: "Pluralsight subscription discount",
     description: "Master technical skills with expert-led courses in software development, IT, and data.",
     longDescription: "Pluralsight is the technology workforce development company that helps teams build better products by developing critical skills, improving processes, and gaining insights through data. Our discounted subscription provides access to their full library of 7,000+ expert-led courses in software development, IT ops, data, security, and more.",
     logo: "/platforms/pluralsight.svg",
@@ -464,6 +459,7 @@ export const platforms: Platform[] = [
   {
     name: "DataCamp",
     slug: "datacamp",
+    h1: "DataCamp subscription discount",
     description: "Learn data science, AI, and analytics with interactive coding exercises.",
     longDescription: "DataCamp is the go-to platform for learning data science and analytics. With interactive coding exercises in Python, R, SQL, and more, you learn by doing rather than watching. Our discounted subscription gives you access to 400+ courses, career tracks, projects, and the DataCamp practice workspace.",
     logo: "/platforms/datacamp.svg",
@@ -533,6 +529,7 @@ export const platforms: Platform[] = [
   {
     name: "Codecademy",
     slug: "codecademy",
+    h1: "Codecademy subscription discount",
     description: "Learn to code interactively with hands-on programming courses.",
     longDescription: "Codecademy is an interactive platform that teaches you to code through hands-on practice. With courses in 14+ programming languages and a focus on project-based learning, Codecademy makes it easy to start coding from scratch or advance your existing skills. Our discounted Pro subscription includes career paths, real-world projects, and professional certificates.",
     logo: "/platforms/codecademy.svg",
@@ -602,6 +599,7 @@ export const platforms: Platform[] = [
   {
     name: "MasterClass",
     slug: "masterclass",
+    h1: "MasterClass subscription discount",
     description: "Learn from the world's best — celebrity and expert-taught classes in every field.",
     longDescription: "MasterClass offers online classes taught by the most renowned experts in their fields: Gordon Ramsay on cooking, Martin Scorsese on filmmaking, Neil deGrasse Tyson on scientific thinking, and many more. Each class features cinematic-quality video lessons, downloadable workbooks, and community activities. Our discounted subscription gives you unlimited access to every MasterClass.",
     logo: "/platforms/masterclass.svg",
@@ -671,6 +669,7 @@ export const platforms: Platform[] = [
   {
     name: "FutureLearn",
     slug: "futurelearn",
+    h1: "FutureLearn subscription discount",
     description: "Join UK and global university courses with a focus on professional and personal growth.",
     longDescription: "FutureLearn is a leading online learning platform offering courses from world-renowned universities like King's College London, University of Leeds, and partners across the globe. Specializing in professional development and personal growth, FutureLearn provides microcredentials, short courses, and full online degrees. Our discounted Unlimited subscription gives you access to thousands of courses.",
     logo: "/platforms/futurelearn.svg",
