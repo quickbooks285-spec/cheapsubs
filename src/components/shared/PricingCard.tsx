@@ -100,8 +100,13 @@ export function PricingCard({ plan, platformName, className }: PricingCardProps)
                         ? "bg-white text-primary-600 hover:bg-primary-50 shadow-md"
                         : "bg-primary-500 text-white hover:bg-primary-600 shadow-md hover:shadow-lg"
                 )}
+                asChild={!!plan.href}
             >
-                Get {plan.name}
+                {plan.href ? (
+                    <a href={plan.href}>Get {plan.name}</a>
+                ) : (
+                    <>Get {plan.name}</>
+                )}
             </Button>
         </div>
     );

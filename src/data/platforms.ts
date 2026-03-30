@@ -4,6 +4,7 @@ export interface Plan {
   period: string;
   features: string[];
   popular?: boolean;
+  href?: string;
 }
 
 export interface Testimonial {
@@ -65,6 +66,7 @@ export const platforms: Platform[] = [
         period: "year",
         features: ["Full platform access", "Unlimited courses", "Certificates included", "Priority support", "Career guidance", "Billed annually"],
         popular: true,
+        href: "https://digital-sub-rose.vercel.app/",
       },
     ],
     testimonials: [
