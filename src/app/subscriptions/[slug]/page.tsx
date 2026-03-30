@@ -92,9 +92,10 @@ export default async function PlatformPage({
 
             <HeroSection
                 variant="small"
-                badge={`Save ${platform.discountPercent}% — Starting at $${platform.ourPrice}/mo`}
+                badge={`Save ${platform.discountPercent}% — Starting at $${platform.ourPrice}/${platform.plans[0]?.period ?? "mo"}`}
                 title={platform.h1 ?? `${platform.name} Subscription`}
                 subtitle={platform.longDescription}
+                primaryCTA={platform.plans[0]?.href ? { label: `Get ${platform.name} — $${platform.ourPrice}/${platform.plans[0].period}`, href: platform.plans[0].href } : undefined}
             />
 
             <PricingCards
@@ -131,8 +132,8 @@ export default async function PlatformPage({
             <CTASection
                 title={`Start Learning with ${platform.name} Today`}
                 subtitle={`Get full access to ${platform.name} at ${platform.discountPercent}% off. Join thousands of learners saving with CDS.`}
-                buttonLabel={`Get ${platform.name} — $${platform.ourPrice}/mo`}
-                buttonHref="/contact"
+                buttonLabel={`Get ${platform.name} — $${platform.ourPrice}/${platform.plans[0]?.period ?? "mo"}`}
+                buttonHref={platform.plans[0]?.href ?? "/contact"}
             />
         </>
     );
