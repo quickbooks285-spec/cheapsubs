@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { appendFile } from "fs/promises";
-import path from "path";
+import { supabase } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,9 +7,10 @@ export async function POST(req: NextRequest) {
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
-    const filePath = path.join(process.cwd(), "emails.txt");
-    const timestamp = new Date().toISOString();
-    await appendFile(filePath, `${timestamp} - ${email}\n`);
+    const { error } = await supabase.from("emails").insert({ email });
+    if (error) {
+      return NextResponse.json({ error: "Failed to save email" }, { status: 500 });
+    }
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: "Failed to save email" }, { status: 500 });
