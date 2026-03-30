@@ -7,6 +7,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { platforms, getPlatformBySlug } from "@/data/platforms";
+import { CheckoutButton } from "@/components/shared/CheckoutButton";
 import { ProductSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 import { Check } from "lucide-react";
 
@@ -95,8 +96,16 @@ export default async function PlatformPage({
                 badge={`Save ${platform.discountPercent}% — Starting at $${platform.ourPrice}/${platform.plans[0]?.period ?? "mo"}`}
                 title={platform.h1 ?? `${platform.name} Subscription`}
                 subtitle={platform.longDescription}
-                primaryCTA={platform.plans[0]?.href ? { label: `Get ${platform.name} — $${platform.ourPrice}/${platform.plans[0].period}`, href: platform.plans[0].href } : undefined}
-            />
+            >
+                {platform.plans[0]?.href && (
+                    <CheckoutButton
+                        label={`Get ${platform.name} — $${platform.ourPrice}/${platform.plans[0].period}`}
+                        stripeUrl={platform.plans[0].href}
+                        size="lg"
+                        className="bg-primary-500 hover:bg-primary-600 text-white text-base font-semibold px-8 py-6 rounded-xl shadow-[0_4px_14px_oklch(0.63_0.18_250_/_0.3)] hover:shadow-[0_6px_20px_oklch(0.63_0.18_250_/_0.4)] transition-all duration-300 hover:-translate-y-0.5"
+                    />
+                )}
+            </HeroSection>
 
             <PricingCards
                 title={`${platform.name} Plans`}
@@ -132,8 +141,14 @@ export default async function PlatformPage({
             <CTASection
                 title={`Start Learning with ${platform.name} Today`}
                 subtitle={`Get full access to ${platform.name} at ${platform.discountPercent}% off. Join thousands of learners saving with CDS.`}
-                buttonLabel={`Get ${platform.name} — $${platform.ourPrice}/${platform.plans[0]?.period ?? "mo"}`}
-                buttonHref={platform.plans[0]?.href ?? "/contact"}
+                customButton={platform.plans[0]?.href ? (
+                    <CheckoutButton
+                        label={`Get ${platform.name} — $${platform.ourPrice}/${platform.plans[0].period}`}
+                        stripeUrl={platform.plans[0].href}
+                        size="lg"
+                        className="bg-white text-primary-700 hover:bg-primary-50 text-base font-semibold px-8 py-6 rounded-xl shadow-[0_4px_14px_oklch(0_0_0_/_0.15)] hover:shadow-[0_6px_20px_oklch(0_0_0_/_0.2)] transition-all duration-300 hover:-translate-y-0.5"
+                    />
+                ) : undefined}
             />
         </>
     );

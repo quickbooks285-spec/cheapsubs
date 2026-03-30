@@ -66,7 +66,7 @@ export const platforms: Platform[] = [
         period: "year",
         features: ["Full platform access", "Unlimited courses", "Certificates included", "Priority support", "Career guidance", "Billed annually"],
         popular: true,
-        href: "https://digital-sub-rose.vercel.app/",
+        href: "https://buy.stripe.com/aFa4gA0bB8JD2rWcoW4wM0M",
       },
     ],
     testimonials: [

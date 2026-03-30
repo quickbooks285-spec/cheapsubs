@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CustomBadge } from "./Badge";
 import { Check } from "lucide-react";
 import type { Plan } from "@/data/platforms";
+import { CheckoutButton } from "./CheckoutButton";
 
 interface PricingCardProps {
     plan: Plan;
@@ -93,21 +94,29 @@ export function PricingCard({ plan, platformName, className }: PricingCardProps)
             </ul>
 
             {/* CTA */}
-            <Button
-                className={cn(
-                    "w-full font-semibold text-sm py-5 transition-all duration-200",
-                    plan.popular
-                        ? "bg-white text-primary-600 hover:bg-primary-50 shadow-md"
-                        : "bg-primary-500 text-white hover:bg-primary-600 shadow-md hover:shadow-lg"
-                )}
-                asChild={!!plan.href}
-            >
-                {plan.href ? (
-                    <a href={plan.href}>Get {plan.name}</a>
-                ) : (
-                    <>Get {plan.name}</>
-                )}
-            </Button>
+            {plan.href ? (
+                <CheckoutButton
+                    label={`Get ${plan.name}`}
+                    stripeUrl={plan.href}
+                    className={cn(
+                        "w-full font-semibold text-sm py-5 transition-all duration-200",
+                        plan.popular
+                            ? "bg-white text-primary-600 hover:bg-primary-50 shadow-md"
+                            : "bg-primary-500 text-white hover:bg-primary-600 shadow-md hover:shadow-lg"
+                    )}
+                />
+            ) : (
+                <Button
+                    className={cn(
+                        "w-full font-semibold text-sm py-5 transition-all duration-200",
+                        plan.popular
+                            ? "bg-white text-primary-600 hover:bg-primary-50 shadow-md"
+                            : "bg-primary-500 text-white hover:bg-primary-600 shadow-md hover:shadow-lg"
+                    )}
+                >
+                    Get {plan.name}
+                </Button>
+            )}
         </div>
     );
 }

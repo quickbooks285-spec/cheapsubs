@@ -2,12 +2,14 @@ import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import type { ReactNode } from "react";
 
 interface CTASectionProps {
     title: string;
     subtitle: string;
     buttonLabel?: string;
     buttonHref?: string;
+    customButton?: ReactNode;
     className?: string;
 }
 
@@ -16,6 +18,7 @@ export function CTASection({
     subtitle,
     buttonLabel = "Get Started Today",
     buttonHref = "/subscriptions",
+    customButton,
     className,
 }: CTASectionProps) {
     return (
@@ -50,16 +53,18 @@ export function CTASection({
                         <p className="text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-8 text-white/80">
                             {subtitle}
                         </p>
-                        <Button
-                            size="lg"
-                            className="bg-white text-primary-700 hover:bg-primary-50 text-base font-semibold px-8 py-6 rounded-xl shadow-[0_4px_14px_oklch(0_0_0_/_0.15)] hover:shadow-[0_6px_20px_oklch(0_0_0_/_0.2)] transition-all duration-300 hover:-translate-y-0.5 group"
-                            asChild
-                        >
-                            <a href={buttonHref}>
-                                {buttonLabel}
-                                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                            </a>
-                        </Button>
+                        {customButton ?? (
+                            <Button
+                                size="lg"
+                                className="bg-white text-primary-700 hover:bg-primary-50 text-base font-semibold px-8 py-6 rounded-xl shadow-[0_4px_14px_oklch(0_0_0_/_0.15)] hover:shadow-[0_6px_20px_oklch(0_0_0_/_0.2)] transition-all duration-300 hover:-translate-y-0.5 group"
+                                asChild
+                            >
+                                <a href={buttonHref}>
+                                    {buttonLabel}
+                                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                </a>
+                            </Button>
+                        )}
                     </div>
                 </div>
             </Container>
